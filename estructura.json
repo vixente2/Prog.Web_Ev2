@@ -1,0 +1,27 @@
+{
+    "folio":"(ValorIdentificador Boleta)",
+    "fecha":"Fecha Actual",
+    "cliente":{
+            "nombres":"Nombre Cliente",
+            "apellidos":"Apellido Cliente",
+            "nacionalidad":{
+            "codNacionalidad":"código nacionalidad según combobox",
+            "nombreNacionalidad":"nombreNacionalidad"
+            }
+    },
+    "producto":{
+        "codigoProducto":"Código del producto",
+        "cantidadProducto":"Cantidad Producto",
+        "precioProducto":"Precio Producto",
+        "categoria":{
+            "codigoCategoria":"Código Categoría según combobox",
+            "nombreCategoría":"Nombre Categoría según Combobox"
+        }
+    },
+    "subtotal":"valor en clp (cantidad * precio)",
+    "descuento":"Según medio Pago",
+    "medioPago":"Tarjeta/Efectivo",
+    "divisaPagada":"CLP|Dolar|Euro",
+    "valorDivisa":"Valor CLP por defecto 1 a 1, Dólar o Euro",
+    "totalPago":"Total a Pagar (SubTotal - Descuento)"
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.:: Mi Primera Página ::.</title>
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+     <script src="../assets/js/Combo.js"></script>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12 bg-danger">
+                <h3 class="text-center text-white">Evaluación Sumativa 2 (PolanDutyFree)</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 bg-warning table-responsive">
+                <table class="table table-striped table-bordered bg-white mt-2">
+                    <thead class="table-dark">
+                        <th colspan="8" class="text-center">Tabla de Registros</th>
+                        <tr>
+                            <td>Folio</td>
+                            <td>Fecha</td>
+                            <td>Nacionalidad</td>
+                            <td>Nombre Cliente</td>
+                            <td>Total Pago</td>
+                            <td colspan="3">Acciones</td>
+                        </tr>
+                    </thead>
+                    <tbody class="cargarDatosTabla">
+                        
+                    </tbody>
+                    <tfoot class="table-dark">
+                        <tr>
+                            <td colspan="8">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a href="#" class="page-link"><< </a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a href="#" class="page-link ">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link"> >></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col-md-5 bg-success p-3">
+                <div class="row bg-white ">
+                    <div class="col-md-12 mt-2">
+                        <h4 class=" text-center">Formulario Venta</h4>
+                    </div>
+                    <div class="row ml-2">
+                        <div class="col-md-12">
+                            <form action="#" class="form_venta">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="txt_run">Run</label>
+                                        <input type="text" id="txt_run" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="txt_nombres">Nombres</label>
+                                        <input type="text" id="txt_nombres" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="txt_apellidos">Apellidos</label>
+                                        <input type="text" id="txt_apellidos" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="txt_nacionalidad">Nacionalidad</label>
+                                        <select name="Combo_nacionalidad" class="Combo_nacionalidad form-control">
+                                            <option value="">(Cargar desde JSON)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="txt_correo">Correo</label>
+                                        <input type="email" id="txt_correo" class="form-control" id="">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form group col-md-6">
+                                        <label for="">Categoría</label>
+                                       <select name="" class="Combo_categoria form-control">
+                                            <option value="">(Cargar desde JSON)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="">Productos</label>
+                                        <select name="" class="Combo_producto form-control">
+                                            <option value="">(Cargar desde JSON)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="">Precio</label>
+                                        <input type="text" id="txt_precio"  class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="">Cantidad</label>
+                                        <input type="text" id="txt_cantidad" name="txtCantidad" placeholder="Cantidad del producto" class="form-control">
+                                    </div>
+                                </div>
+                                 <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="">Medio Pago</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="medioPago" id="medioPagoEfectivo" value="0.30" data-tipo="Efectivo">
+                                            <label class="form-check-label" for="medioPagoEfectivo">
+                                                Efectivo
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="medioPago" id="medioPagoTarjeta" value="0.10" data-tipo="Tarjeta">
+                                            <label class="form-check-label" for="medioPagoTarjeta">
+                                                Tarjeta
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="">Divisa Pago</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="tipoDivisa" id="tipoDivisaCLP" value="clp">
+                                            <label class="form-check-label" for="tipoDivisaCLP">
+                                                CLP
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="tipoDivisa" id="tipoDivisaDolar" value="dolar">
+                                            <label class="form-check-label" for="tipoDivisaDolar">
+                                                Dolar
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="tipoDivisa" id="tipoDivisaEuro" value="euro">
+                                            <label class="form-check-label" for="tipoDivisaEuro">
+                                                Euro
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="">Dolar</label>
+                                        <label class="form-control" id="lbl_dolar">($ USD)</label>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="" >Euro</label>
+                                        <label class="form-control" id="lbl_euro">($ Euro)</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="" class="sub_total">Sub Total</label>
+                                        <label class="form-control" id="lbl_subtotal">SubTotal (Cantidad * Precio)</label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="">Descuento</label>
+                                        <label class="lbl_Descuento form-control">Descuento (Medio Pago)</label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="">Total a Pagar</label>
+                                        <label class="lbl_Total form-control">Total a pagar (Subtotal - descuento)</label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <input type="submit" class="form-control btn btn-info" value="Procesar Venta">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
